@@ -5,9 +5,7 @@
 # original string, starting with the first character.
 
 def every_other_letter(string)
-  result = []
-  string.split('').each.with_index {|char,index| result << char if index.even?}
-  result.join
+  string.split('').select.with_index {|char,index| char if index.even?}.join
 end
 
 puts "------Every Other Letter------"
